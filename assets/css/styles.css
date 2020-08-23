@@ -1,0 +1,918 @@
+@import url(reset.css);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700&display=swap');
+
+
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+/* site-wide styles */
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    color: hsla(26, 8%, 30%, 1);
+}
+
+h1, h2, h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter;
+}
+
+h2{
+    margin: 5vmin;
+    margin-top: 10vmin;
+}
+
+ul li{
+    list-style: square;
+}
+
+
+/*home page and general styles*/
+
+.header{
+    background-image: 
+        /* radial-gradient(circle, rgba(2,0,36,0) 0%, rgba(9,9,121,0) 35%, rgba(0,0,0,0.9923319669664741) 100%),         */
+        /* radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.43771011822697825) 19%, rgba(0,0,0,0.9923319669664741) 100%), */
+        radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.43771011822697825) 18%, rgba(0,0,0,0.9923319669664741) 94%),
+        url(../images/IMG_3451.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 3fr 1fr;
+
+    height: 85vh;
+}
+
+#home-julia-logo{
+    width: 100px;
+    margin: 5vmin;
+
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+
+.global-nav{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+.global-nav-ul{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-grow: 1;
+}
+
+.global-nav-ul > li{
+    display: flex;
+    justify-items: center;
+}
+
+
+#close-menu{
+    display: none;
+}
+
+
+/* underline code from this codepen: https://codepen.io/jstn/pen/zuDst */
+
+.global-nav-ul > li > a {
+    color: white;
+    margin: 2vmin;
+    padding: 0px 15px 15px 15px;
+    position: relative;
+}
+.global-nav-ul > li > a:after {    
+    /* background: none repeat scroll 0 0 transparent; */
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+.global-nav-ul > li > a:hover:after { 
+    width: 100%; 
+    left: 0; 
+}
+
+
+#home-intro{
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    color: white;
+}
+
+#home-title{
+    font-size: 3rem;
+    margin-right: 15vw;
+}
+
+#home-intro >p{
+    font-size: 1rem;
+    margin-right: 15vw;
+}
+
+#home-button{
+    margin-top: 7vmin;
+}
+
+#home-button a{
+    border: 2px solid white;
+    border-radius: 8px;
+    padding: 2vmin;
+    color: white;
+    text-decoration: none;
+}
+
+#home-button a:hover{
+    /* color: #60bdb3; */
+    /* color: hsla(213, 23%, 48%, 0.95); */
+    color: hsla(249, 80%, 56%, 1);
+    /* border: 2px solid #60bdb3; */
+    /* border: 2px solid hsla(213, 23%, 48%, 0.95); */
+    border: 2px solid hsla(249, 80%, 56%, 1);
+    ;
+    transition: ease-in-out 0.3s;
+    
+}
+
+/* pages header styles */
+
+.page-header{
+    /* background: black; */
+    height: 50vh;
+    grid-template-columns: 15vw 3fr;
+}
+
+.page-julia-logo{
+    height: 100px;
+    margin: 3vmin;
+
+    grid-column: 1/2;
+}
+
+.page-title{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    color: white;
+    align-self: center;
+}
+
+
+
+/* menu and hamburger styling */
+
+
+.hamburger-menu {
+    background: url('../images/menu.svg');
+    height: 40px;
+    width: 40px;
+    background-size: 40px;
+    margin: 20px;
+    display: none; /*so it doesn't show up at desktop size*/
+
+    /* grid */
+    grid-column: 2/3;
+    grid-row: 1/2;
+    justify-self: end;
+}
+
+#close-menu {
+    background: url('../images/close.svg');
+    height: 30px;
+    width: 30px;
+    background-size: 30px;
+    display: none;
+    align-self: flex-end;
+    margin: 15px;
+}
+
+/* web dev page styling */
+
+.web-main-flexbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80vw;
+    margin: auto;
+
+    /* possible color option */
+    /* background: black;
+    color: white; */
+}
+
+.web-section-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vmin;
+}
+
+.web-screenshot{
+    width: 50vw;
+    border-radius: 10px;
+    border: 1px solid rgba(28,28,28,0.4);
+    box-shadow: 0px 3px 28px -3px rgba(28,28,28,1);
+}
+
+.web-screenshot:hover{
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
+
+.web-section-flex > article{
+    max-width: 40ch;
+    margin: 5vmin;
+}
+
+.web-section-flex > article > a{
+    text-decoration: none;
+    color: hsla(249, 80%, 56%, 1);
+}
+
+.web-section-flex > article > a:hover{
+    color: hsla(249, 85%, 70%, 1);
+}
+
+
+
+
+
+/* art and photos page */
+
+
+.art-photos-section{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.art-photos-section > a > img{
+    width: 300px; 
+    /* width: auto; */
+    margin: 3vmin;
+    border-radius: 10px;
+    /* border: 1px solid rgba(28,28,28,0.4); */
+}
+
+.art-photos-section > a > img:hover{
+    box-shadow: 0px 3px 28px -3px rgba(28,28,28,1);
+    transition: 0.2s ease-in-out; 
+}
+
+
+
+/* code from https://www.sylvaindurand.org/overlay-image-in-pure-css/#_ - very helpful article, I made my own edits as well to suit my needs*/
+
+.overlay {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    visibility: hidden;
+    /* opacity: 0; 
+    transition:  0.3s; */
+  }
+  
+   .overlay img{
+    width: 20vw;
+    transform: scale(0.8);
+  }
+  
+  .overlay:target {
+    visibility: visible;
+    outline: none;
+    cursor: default;
+  }
+  
+  .overlay:target img {
+      transform: scale(1);
+      transition: 0.5s;
+      /* width: 60vmin;
+      height: auto; */
+      height: 70vmin;
+      width: auto;
+      border-radius: 0;
+  }
+  /* end of overlay code from sylivandurand.com */
+
+
+  /* design page */
+
+  .design-section{
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 7vmin;
+  } 
+
+  .design-section img{
+      width: 300px;
+      height: auto;
+  }
+
+/* logos */
+
+  .logo-section img{
+    padding: 2vmin;
+  }
+
+  .logo-section{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      width: 85vw;
+  }
+
+  #zoo-logos{
+      grid-column: 1/2;
+      grid-row: 1/3;
+      width: 30vw;
+  }
+
+  #dots-logo{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 15vw;
+  }
+
+  #turtle-logo{
+      grid-column: 3/4;
+      grid-row: 1/2;
+      width: 20vw;
+  }
+
+  #logo-paragraph{
+      grid-column: 2/4;
+      grid-row: 2/3;
+      max-width: 60ch;
+      padding: 2vmin;
+      align-self: start;
+  }
+
+  /* mock-ups */
+
+  .mockup-section{
+      display: flex;
+      flex-direction: column;
+
+      width: 90vw;
+  }
+
+  .mockup-div-flex{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+
+  .mockup-div-flex img{
+      width: 40vw;
+      height: auto;
+      margin: 2vmin;
+      border: 1px solid gray;
+  }
+
+  .mockup-and-paragraph-div{
+      display: flex;
+      flex-direction: column;
+  }
+
+  #mockup-paragraph{
+      max-width: 60ch;
+  }
+
+
+  /* typography */
+
+  .experiment-section img{
+    padding: 2vmin;
+  }
+
+  .experiment-section{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+      align-items: center;
+      justify-items: center;
+      
+  }
+
+  #typography-sketch{
+      grid-column: 1/2;
+      grid-row: 1/4;
+      width: 40vw;
+  }
+
+  #ambigram{
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: 30vw;
+  }
+
+  #deconstructed-text{
+      grid-column: 2/3;
+      grid-row: 2/3;
+      width: 30vw;
+  }
+
+  #experiment-paragraph{
+      grid-column: 2/3;
+      grid-row: 3/4;
+      max-width: 50ch;
+      padding: 2vmin;
+      align-self: start;
+  }
+
+  /* about page */
+
+  #julia-photo{
+      display: block;
+      float: left;
+      width: 10vw;
+      filter: grayscale(100%);
+      margin: 0 20px 20px 0;
+  }
+
+  .about-flex{
+      display: flex;
+      width: 80vw;
+      margin: 0 auto;
+      justify-content: space-around;
+  }
+
+  .about-flex h2{
+      margin-left: 0;
+  }
+
+  .my-skills ul li{
+      font-size: 16px;
+      font-family: 'Open Sans', sans-serif;
+      color: hsla(26, 8%, 30%, 1);
+  }
+
+  #about-paragraph{
+      margin: 7vmin auto;
+      text-align: center;
+      max-width: 60ch;
+      font-size: 1.2rem;
+  }
+
+  .my-story{
+      width: 30vw;
+      max-width: 60ch;
+  }
+
+  .my-skills{
+      width: 30vw;
+  }
+
+  article ul{
+      margin-bottom: 5vmin;
+  }
+
+/* contact */
+
+  .contact-main{
+      display: flex;
+      justify-content: space-evenly;
+      width: 80vw;
+      margin: 0 auto;
+  }
+
+  .contact-main a{
+      text-decoration: none;
+  }
+
+  .contact-info-section{
+      width: 40vw;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .contact-icon{
+      font-size: 40px;
+      text-align: center;
+  }
+
+  .contact-blog{
+      padding: 5vmin;
+  }
+
+  .contact-blog h2{
+      margin-left: 0;
+  }
+
+  .contact-fieldset{
+      width: 40vw;
+      border: none;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .contact-info-section h2{
+    text-align: center;
+}
+
+  form{
+    margin-top: 10vmin;
+    margin-bottom: 10vmin;
+
+  }
+  .contact-legend{
+      font-size: 1.5rem;
+      font-family: 'Raleway', sans-serif;
+  }
+
+  #contact-submit-button{
+    border: 2px solid hsla(249, 80%, 56%, 1);
+    background: hsla(249, 80%, 56%, 1);
+    border-radius: 8px;
+    padding: 1.5vmin 3vmin;
+    margin-top: 5vmin;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+#contact-submit-button:hover{
+    border: 2px solid hsla(249, 80%, 56%, 1);
+    background: white;
+    color: hsla(249, 80%, 56%, 1);
+    transition: ease-in-out 0.3s;
+}
+
+#message{
+    width: 50vw;
+    height: 30vh;
+    padding-top: 5px;
+}
+
+label{
+    margin-top: 3vmin;
+    margin-bottom: 2vmin;
+}
+
+input{
+    width: 30vw;
+    height: 25px;
+}
+
+input, #message{
+    border: 0;
+    border-radius: 5px;
+    background: hsla(249, 20%, 90%, 1);
+    padding-left: 5px;
+}
+
+input:focus, #message:focus{
+    outline: 1px solid hsla(249, 20%, 50%, 1);
+}
+
+.contact-form-section{
+    padding: 0 5vmin;
+
+}
+
+/* footer */
+
+footer{
+    background: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    height: 15vh;
+    margin-bottom: 0;
+}
+
+footer > p{
+    margin: 1vmin;
+}
+
+footer > p > a{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: lighter;
+}
+
+footer > p > a:hover{
+    color: hsla(249, 80%, 56%, 1);
+}
+
+@media (max-width: 1200px){
+    
+    .web-main-flexbox{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 1050px){
+    .contact-main{
+        width: 90vw;
+    }
+}
+
+@media (max-width: 900px){
+    nav {
+        position: fixed; 
+        top: 0;
+        bottom: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        
+        transform: translateX(250px);
+
+        background: hsla(213, 23%, 8%, 0.95);
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .menu-open{
+        transform: translateX(-250px);
+        transition: 0.2s;
+        /* cubic bezier?? */
+    }
+
+    .menu-close{
+        transform: translateX(0px);
+        transition: 0.2s;
+    }
+
+    .hamburger-menu, #close-menu{
+        display: block; 
+    }
+
+    nav ul{
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    nav ul li{
+        flex-grow: 0;
+        align-self: flex-start;
+    }
+
+    #home-julia-logo{
+        height: 100px;
+    }
+
+    .header{
+        grid-template-columns: 15vw 3fr;
+        grid-template-rows: 1fr 4fr 1fr;
+    }
+
+    /* web page flexbox small screen */
+
+    .web-section-flex{
+        flex-direction: column;
+    }
+
+    .web-section-flex > article{
+        max-width: 70ch;
+        /* margin: 5vmin; */
+    }
+
+    .web-screenshot{
+        width: 80vw;
+    }
+
+    /* art and photos */
+    .overlay:target img {
+        transform: scale(1.1);
+        transition: 0.6s;
+        width: 70vmin;
+        height: auto;
+    }
+
+    /* design page */
+
+    .mockup-div-flex{
+        flex-direction: column;
+    }
+
+    .mockup-and-paragraph-div{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+  
+    .mockup-div-flex img{
+        width: 80vw;
+    }
+
+    #mockup-paragraph{
+        padding: 3vmin;
+    }
+
+    /* contact */
+
+    .contact-main{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-info-section{
+        width: 70vw;
+    }
+
+
+    .blog-link{
+        text-align: center;
+    }
+}
+
+@media (max-width: 770px){
+    .art-photos-section > a > img{
+        width: 35vw; 
+        margin: 2vmin;
+    }
+
+    /* logos */
+    .logo-section{
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 2fr 2fr 3fr;
+    }
+
+    #zoo-logos{
+        width: 40vw;
+    }
+
+
+    #turtle-logo{
+        grid-area: 2/2/3/3;
+    }
+
+    #logo-paragraph{
+        grid-area: 3/1/3/3;
+    }
+
+    /* typography */
+
+    .experiment-section{
+        grid-template-columns: 3fr 2fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    #typography-sketch{
+        width: 40vw;
+    }
+
+
+    #deconstructed-text{
+        grid-area: 2/2/3/3;
+    }
+
+    #experiment-paragraph{
+        grid-area: 3/2/4/3;
+    }
+
+    /* about page */
+
+    .about-flex{
+        flex-direction: column-reverse;
+        align-content: center;
+    }
+
+    .about-flex article{
+        width: 60vw;
+        align-self: center;
+    }
+
+    #julia-photo{
+        width: 30vw;
+    }
+    #about-paragraph{
+        margin: 7vmin;
+    }
+
+    article p{
+        min-width: 25ch;
+    }
+
+    article ul{
+        margin-bottom: 7vmin;
+    }
+    
+}
+
+@media (max-width: 630px){
+        /* typography */
+
+        .experiment-section{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 2fr 1fr;
+    
+        }
+    
+        #typography-sketch{
+            grid-area: 3/1/4/2;
+            width: 70vw;
+        }
+    
+        #ambigram{
+            grid-area: 1/1/2/2;
+            width: 70vw;
+    
+        }
+    
+        #deconstructed-text{
+            grid-area: 2/1/3/2;
+            width: 70vw;
+    
+        }
+
+        #experiment-paragraph{
+            grid-area: 4/1/5/2;
+        }
+
+        /* contact */
+
+        .contact-fieldset{
+            width: 80vw;
+        }
+
+        #message{
+            width: 70vw;
+        }
+
+        input{
+            width: 50vw;
+        }
+
+        
+}
+
+@media (max-width: 400px){
+    .header{
+        grid-template-columns: 15vw 3fr;
+        grid-template-rows: 1fr 4fr 1fr;
+        height: 90vh;
+    }
+
+    .page-header{
+        height: 50vh;
+    }
+
+    #home-intro{
+        align-self: center;
+    }
+
+    #home-button a{
+        padding: 3vmin;
+    }
+
+    /* design page */
+    .logo-section{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 2fr 3fr;
+
+    }
+
+    #zoo-logos{
+        grid-area: 2/1/3/3;
+        width: 60vw;
+    }
+
+    #dots-logo{
+        grid-area: 1/1/2/2;
+        width: 30vw;
+
+    }
+
+    #turtle-logo{
+        grid-area: 1/2/2/3;
+        width: 30vw;
+
+    }
+
+    /* contact */
+
+    #contact-submit-button{
+        padding: 3vmin 5vmin;
+    }
+
+    footer{
+        height: 10vh;
+    }
+}
