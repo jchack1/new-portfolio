@@ -1,2 +1,1 @@
-# final-portfolio
-Final portfolio assignment for SAIT Web Developer program. You may view my site at juliachack.com
+Updated portfolio. Original code from my final portfolio project at SAIT. You may view my site at juliachack.com
