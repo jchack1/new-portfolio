@@ -58,6 +58,8 @@ ul li{
 .global-nav{
     grid-column: 2/3;
     grid-row: 1/2;
+    align-self: center;
+
 }
 
 .global-nav-ul{
@@ -77,6 +79,9 @@ ul li{
     display: none;
 }
 
+.header .global-nav{
+    margin-right: 50px;
+}
 
 /* underline code from this codepen: https://codepen.io/jstn/pen/zuDst */
 
@@ -86,6 +91,22 @@ ul li{
     padding: 0px 15px 15px 15px;
     position: relative;
 }
+
+
+#nav-active:after{
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    
+    width: 0;
+    width: 100%; 
+    left: 0; 
+}
+
 .global-nav-ul > li > a:after {    
     /* background: none repeat scroll 0 0 transparent; */
     bottom: 0;
@@ -149,24 +170,26 @@ ul li{
 /* pages header styles */
 
 .page-header{
-    /* background: black; */
-    height: 50vh;
+    background: black;
+    height: 120px;
+    display: grid;
     grid-template-columns: 15vw 3fr;
 }
 
 .page-julia-logo{
-    height: 100px;
-    margin: 3vmin;
+    height: 50px;
+    margin: 30px;
 
     grid-column: 1/2;
+    align-self: center;
 }
 
-.page-title{
+/* .page-title{
     grid-column: 2/3;
     grid-row: 2/3;
     color: white;
     align-self: center;
-}
+} */
 
 
 
@@ -185,6 +208,7 @@ ul li{
     grid-column: 2/3;
     grid-row: 1/2;
     justify-self: end;
+    align-self: center;
 }
 
 #close-menu {
