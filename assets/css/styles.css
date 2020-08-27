@@ -59,7 +59,7 @@ ul li{
     grid-column: 2/3;
     grid-row: 1/2;
     align-self: center;
-
+    margin-right: 5vmin;
 }
 
 .global-nav-ul{
@@ -170,18 +170,31 @@ ul li{
 /* pages header styles */
 
 .page-header{
-    background: black;
-    height: 120px;
+    /* background: black; */
+    height: 150px;
     display: grid;
     grid-template-columns: 15vw 3fr;
+
+    background-image: 
+        
+        radial-gradient(circle, rgba(0,0,0,0) 0%, rgba(0,0,0,0.43771011822697825) 18%, rgba(0,0,0,0.9923319669664741) 88%),
+        url(../images/page-header2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+header > a{
+    width: min-content;
+    height: min-content;
+    align-self: center;
+    justify-self: center;
 }
 
 .page-julia-logo{
-    height: 50px;
-    margin: 30px;
+    height: 60px;
 
     grid-column: 1/2;
-    align-self: center;
 }
 
 /* .page-title{
@@ -947,9 +960,9 @@ footer > p > a:hover{
         height: 90vh;
     }
 
-    .page-header{
+    /* .page-header{
         height: 50vh;
-    }
+    } */
 
     #home-intro{
         align-self: center;
