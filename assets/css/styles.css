@@ -335,6 +335,32 @@ header > a{
 }
 
 
+/* individual project pages*/
+
+.project-ind-main{
+    display: flex;
+}
+
+.project-header{
+    margin: 20px auto;
+    width: 80vw;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.project-header-image{
+    grid-column: 1/2;
+    width: 50vw;
+    max-width: 600px;
+    margin: 5vmin;
+    border-radius: 10px;
+}
+
+.project-ind-title{
+    font-size: 2.2rem;
+}
+
 
 
 
