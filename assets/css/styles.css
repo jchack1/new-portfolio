@@ -342,19 +342,33 @@ header > a{
 }
 
 .project-header{
-    margin: 20px auto;
-    width: 80vw;
+    margin: 40px auto;
+    width: 70vw;
     align-items: center;
+    justify-content: center;
+    
     display: grid;
     grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.project-header-info{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    flex-direction: column;
+    max-width: 40ch;
+    margin-left: 20px;
 }
 
 .project-header-image{
     grid-column: 1/2;
+    grid-row: 2/3;
     width: 50vw;
     max-width: 600px;
-    margin: 5vmin;
+    margin: auto;
     border-radius: 10px;
+    align-self: center;
 }
 
 .project-ind-title{
@@ -933,7 +947,14 @@ footer > p > a:hover{
 }
 
 @media (max-width: 630px){
-        /* typography */
+        /* project pages */
+
+        /* .project-header-info{
+            grid-template-columns: 1fr;
+        } */
+        
+    
+    /* typography */
 
         .experiment-section{
             grid-template-columns: 1fr;
