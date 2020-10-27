@@ -339,6 +339,7 @@ header > a{
 
 .project-ind-main{
     display: flex;
+    flex-direction: column;
 }
 
 .project-header{
@@ -375,8 +376,32 @@ header > a{
     font-size: 2.2rem;
 }
 
+.project-ind-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: auto;
+}
+
+.project-ind-body img{
+    border-radius: 20px;
+}
+
+.project-ind-body p{
+    align-self: start;
+}
 
 
+/* roots project specific */
+
+.project-body-img-roots{
+    max-width: 800px;
+}
+
+#roots-key-words{
+    align-self: center;
+}
 
 /* art and photos page */
 
