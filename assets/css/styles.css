@@ -27,6 +27,10 @@ ul li{
     list-style: square;
 }
 
+p{
+    font-size: 18px;
+}
+
 
 /*home page and general styles*/
 
@@ -234,7 +238,7 @@ header > a{
     margin: 15px;
 }
 
-/* web dev page styling */
+/* web dev / project page styling */
 
 .web-main-flexbox{
     display: flex;
@@ -273,8 +277,6 @@ header > a{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     box-shadow: 0px 9px 21px -11px rgba(0,0,0,0.75);
-
-
 }
 
 .project-card-title{
@@ -390,20 +392,11 @@ header > a{
     margin-bottom: 10vmin;
 }
 
-.roots-content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 50px;
-    width: 80vw;
-
-}
-
 .project-ind-body img{
     border-radius: 20px;
     margin: 40px 20px;
     width: 80vw;
-    /* border: 1px solid #c4c4c4; */
+    /* border: 1px solid #d6d6d6; */
 }
 
 .project-ind-body p{
@@ -416,7 +409,7 @@ header > a{
 
 .project-ind-body h2{
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-top: 50px;
     margin-bottom: 10px;
 }
@@ -466,94 +459,13 @@ header > a{
     }
 }
 
-@media (min-width: 1000px){
-    .roots-content{
-        flex-direction: row;
-        width: 80vw;
-    }
 
-    .roots-content.roots-palette img{
-        min-width: 500px;
-        max-width: 900px;
-    }
-
-    .roots-content.roots-fonts img{
-        min-width: 500px;
-        max-width: 900px;
-    }
-    .roots-content p{
-        max-width: 30ch;
-        min-width: 20ch;
-        margin: 20px;
-    }
-
-    .roots-content.roots-fonts{
-        flex-direction: row-reverse;
-    }
-
-    .roots-content.roots-logo{
-        justify-items: center;
-        width: 80vw;
-    }
-
-    .roots-logo-images{
-        display: flex;
-        flex-direction: column;
-    }
-
-    #logo-sketch, #logo-final{
-        min-width: 300px;
-        max-width: 800px;
-    }
-
-    .roots-content.roots-letterhead{
-        flex-direction: row-reverse;
-    }
-
-    .roots-content.roots-letterhead img{
-        min-width: 500px;
-        max-width: 900px;
-    }
-
-    #roots-mockup-large{
-        min-width: 300px;
-        max-width: 700px;
-        border-radius: 20px;
-    }
-
-    .roots-content.roots-mockup{
-        justify-content: space-evenly;
-    }
-
-    #roots-brochure-title{
-        min-width: 250px;
-        max-width: 500px;
-    }
-
-    .roots-content.roots-brochure-title{
-        justify-content: space-evenly;
-    }
-
-    .roots-content.roots-brochure-spread{
-        flex-direction: row-reverse;
-        justify-content: space-evenly;
-    }
-
-    #roots-brochure-spread{
-        min-width: 300px;
-        max-width: 900px;
-    }
-
-}
 @media (min-width: 1200px){
     .project-header{
         max-width: 1000px;
-        /* grid-template-columns: 1fr 1fr; */
-        /* margin: auto; */
     }
     .project-header-image{
         margin: 20px;
-        /* justify-self: center; */
     }
 
     .project-ind-description{
@@ -563,21 +475,6 @@ header > a{
     .project-ind-title{
         justify-self: start;
     }
-}
-
-/* roots project specific */
-
-.project-body-img-roots{
-    max-width: 800px;
-}
-
-#roots-key-words{
-    align-self: center;
-}
-
-#roots-tile-large{
-    max-width: 1000px;
-    margin: 40px;
 }
 
 /* art and photos page */

@@ -1,0 +1,103 @@
+.roots-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+    width: 80vw;
+    max-width: 1200px;
+}
+
+@media (min-width: 1000px){
+    .roots-content{
+        flex-direction: row;
+        width: 80vw;
+        margin: 50px;
+        justify-content: space-evenly;
+    }
+
+    .roots-content.roots-palette img{
+        min-width: 500px;
+        max-width: 900px;
+    }
+
+    .roots-content.roots-fonts img{
+        min-width: 500px;
+        max-width: 900px;
+    }
+    .roots-content p{
+        max-width: 30ch;
+        min-width: 20ch;
+        margin: 20px;
+    }
+
+    .roots-content.roots-fonts{
+        flex-direction: row-reverse;
+    }
+
+    .roots-content.roots-logo{
+        justify-items: center;
+        width: 80vw;
+    }
+
+    .roots-logo-images{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #logo-sketch, #logo-final{
+        min-width: 300px;
+        max-width: 800px;
+    }
+
+    .roots-content.roots-letterhead{
+        flex-direction: row-reverse;
+    }
+
+    .roots-content.roots-letterhead img{
+        min-width: 500px;
+        max-width: 900px;
+    }
+
+    #roots-mockup-large{
+        min-width: 300px;
+        max-width: 700px;
+        border-radius: 20px;
+    }
+
+    .roots-content.roots-mockup{
+        justify-content: space-evenly;
+    }
+
+    #roots-brochure-title{
+        min-width: 250px;
+        max-width: 500px;
+    }
+
+    .roots-content.roots-brochure-title{
+        justify-content: space-evenly;
+    }
+
+    .roots-content.roots-brochure-spread{
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+    }
+
+    #roots-brochure-spread{
+        min-width: 300px;
+        max-width: 900px;
+    }
+
+}
+
+.project-body-img-roots{
+    max-width: 800px;
+}
+
+#roots-key-words{
+    align-self: center;
+}
+
+#roots-tile-large{
+    max-width: 1000px;
+    margin: 40px;
+}
