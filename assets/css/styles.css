@@ -27,9 +27,9 @@ ul li{
     list-style: square;
 }
 
-p{
+/* p{
     font-size: 18px;
-}
+} */
 
 
 /*home page and general styles*/
@@ -327,17 +327,17 @@ header > a{
     margin: 5vmin;
 } */
 
-.web-section-flex > article > a{
+
+/* individual project pages*/
+
+.project-ind-main a{
     text-decoration: none;
     color: hsla(249, 80%, 56%, 1);
 }
 
-.web-section-flex > article > a:hover{
+.project-ind-main a:hover{
     color: hsla(249, 85%, 70%, 1);
 }
-
-
-/* individual project pages*/
 
 .hr-style{
     border: 0;

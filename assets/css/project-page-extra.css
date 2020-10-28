@@ -1,0 +1,15 @@
+/* extra styles to help formatting on some of the individual project pages */
+
+.project-ind-main{
+    margin-bottom: 10vmin;
+}
+
+.project-header img{
+    border: 1px solid rgb(196, 196, 196);
+}
+
+@media (min-width: 900px){
+    .project-header{
+        grid-template-rows: 1fr 4fr;
+    }
+}

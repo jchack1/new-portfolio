@@ -1,0 +1,9 @@
+.project-ind-main{
+    margin-bottom: 10vmin;
+}
+
+@media (min-width: 900px){
+    .project-header{
+        grid-template-rows: 1fr 4fr;
+    }
+}
