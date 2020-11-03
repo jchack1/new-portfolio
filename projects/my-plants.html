@@ -7,6 +7,7 @@
     <title>Julia Hack | Plant Website</title>
     <link rel="stylesheet" href="../assets/css/styles.css" />
     <link rel="stylesheet" href="../assets/css/project-page-extra.css" />
+    <link rel="stylesheet" href="../assets/css/my-plants.css" />
     <link
       rel="shortcut icon"
       href="../assets/images/favicon.ico"
@@ -57,19 +58,19 @@
 
         <div class="project-ind-description">
           <p>
-            I created this site in order to practice my HTML, CSS, and
-            JavaScript skills. I chose to showcase my plants so I could practice
+            I created this site not only to practice my HTML, CSS, and
+            JavaScript skills, but also to experiment with designing for different screen sizes. I chose to showcase my plants so I could practice
             creating galleries using CSS flexbox and grid, and also because the
             plants are visually appealing and add a pop of colour to the site.
           </p>
 
-          <p>
+          <!-- <p>
             A user can click on the images, toggling text to appear over the
             image. I created different designs and functionality for desktop,
             tablet and mobile screen sizes, so please view the site at all sizes
             to get the full picture of what I can do with basic HTML, CSS, and
             JavaScript.
-          </p>
+          </p> -->
 
           <p>
             <a
@@ -85,6 +86,63 @@
             >
           </p>
         </div>
+      </section>
+
+      <section class="project-ind-body">
+        <hr class="hr-style"></hr>
+
+        <p>Besides the project goals stated above, the purpose of this site is to tell a story about my plants. A user arrives at the home page to get a brief introduction to the theme of the site, and can quickly see the pages available to navigate - in this case, the plant categories. </p>
+
+        <div class="plants-content">
+          <div class="plant-story-images">
+            <img src="../assets/images/plants/betina.JPG" class="project-body-img-plants-story" alt="betina">
+            <img src="../assets/images/plants/betina-gray.JPG" class="project-body-img-plants-story" alt="betina gray with story">
+          </div>
+          
+          <p>On the individual pages there is a photo of each plant. When a user clicks on a photo it becomes greyed out and white text appears, providing information on the plant. This feature was implemented with vanilla Javascript, which toggles CSS classes on and off. </p>
+        </div>
+        
+        
+        <h2>Visual design</h2>
+        <p>I did not follow a strict design process when creating this site. It mostly came from some layout ideas floating around in my mind and a few initial sketches. I knew I wanted a clean, minimalist style with a neutral color palette. Once I photographed and edited images of my plants the design began to take shape.</p>
+
+        <p>The background in most of my photos was the taupe colour walls in my home. This contrasted beautifully with the deep greens of the plants. I worked light and dark grays throughout the site and added green accents to link hovers. The photos take center-stage and add all remaining colour.</p>
+
+        <hr class="hr-style"></hr>
+
+        <h2>Layouts for different screen sizes</h2>
+        <p>As mentioned above a goal of this project was to practice designing for different screen sizes. The user gets a slightly different experience at mobile, tablet, and desktop sizes, but the functionality of the site remains the same. I could have had the design look very similar at each size, and allow for the site to adjust according to size, but I wanted to get more creative. This site was designed with a desktop-first approach. </p>
+        <p>If you are viewing this project on a desktop browser, please adjust your window size to view each design.</p>
+
+        <h3>Desktop</h3>
+        <div class="plants-content">
+          <img src="../assets/images/plants/plants-desktop.svg"  alt="plants desktop" class="project-body-img-plants">
+          <div class="plants-content-p">
+            <p>For the desktop view I used CSS Grid to implement a photo gallery. Rather than a more typical grid with square photos I wanted to show the photos in their original resolution and composition. The variety of shapes and how they interact with the negative space, especially if you change the window size while viewing, gives this design an eccentric visual experience.</p>
+            <p>I made the menu as minimal as possible. As there is a lot of space to work with on desktop size no backgrounds were included. The menu is differentiated from the rest of the page content only by being italicized and are given a green link hover. The menu is still easy to locate and there is no unnecessary clutter to distract the viewer. </p>
+          </div>
+          
+        </div>
+        <h3>Tablet</h3>
+        <div class="plants-content plants-tablet">
+          <img src="../assets/images/plants/plants-tablet.JPG"  alt="plants tablet" class="project-body-img-plants">
+          <p>Since the tablet size gives extra space to work with compared to a mobile view I added a navigation bar. On its own this was a bit boring so designed the menu items to appear like file-folder tabs. Whatever page is active is filled with the same white background as the main page content. Inactive tabs were given a transparent gray background which changes to pale green upon mouse hover. The folder tab design allows the viewer to see where they are and and what other pages are available in one quick glance, while making use of the "overlap" design trend current at the time the site was built. Instead of a grid design, the photos simply follow each other one-by-one in a column format, and is carried though to the mobile view. This makes the overlaying text easier to read on smaller screens. </p>
+        </div>
+        <h3>Mobile</h3>
+        <div class="plants-content">
+          <div class="plant-story-images">
+            <img src="../assets/images/plants/plants-mobile.JPG"  alt="plants mobile" class="project-body-img-plants-story">
+            <img src="../assets/images/plants/plants-mobile-menu-open.JPG"  alt="plants mobile" class="project-body-img-plants-story">
+          </div>
+          
+          <p>The mobile view removes the tab style navigation bar from the tablet view and replaces it with a hamburger menu in the top right corner. When the icon is clicked/tapped the menu slides onto the screen. It is a transparent gray, like the inactive tabs on the tablet navigation bar; this was simply more visually appealing to me, as the menu didn't appear to be one solid, boring rectangle.</p>
+        </div>
+        <hr class="hr-style"></hr>
+
+        <h2>Conclusions</h2>
+        <p>This project was a game-changer early in my web development and design learning.  Many topics where I was still shaky, like CSS Grid, became much clearer and easier with practice. I worked my way through many challenges with the code, and developed my personal design style and process at the same time.</p>
+        <p>Though this project was created with simple tools and languages it remains a favorite of mine to this day.</p>
+
       </section>
     </main>
 
