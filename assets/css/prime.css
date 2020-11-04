@@ -1,0 +1,9 @@
+.prime-img {
+  max-width: 800px;
+  /* border: 1px solid rgb(173, 173, 173);
+  border-radius: 20px; */
+}
+
+.prime-img.prime-sketch {
+  max-width: 500px;
+}
