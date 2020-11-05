@@ -202,13 +202,6 @@ header > a {
   grid-column: 1/2;
 }
 
-/* .page-title{
-    grid-column: 2/3;
-    grid-row: 2/3;
-    color: white;
-    align-self: center;
-} */
-
 /* menu and hamburger styling */
 
 .hamburger-menu {
@@ -245,10 +238,6 @@ header > a {
   flex-wrap: wrap;
   width: 95vw;
   margin: 5vmin auto;
-
-  /* possible color option */
-  /* background: black;
-    color: white; */
 }
 
 .project-section-flex {
@@ -307,23 +296,6 @@ header > a {
   max-width: max-content;
   max-height: max-content;
 }
-
-/* .web-screenshot{
-    width: 50vw;
-    border-radius: 10px;
-    border: 1px solid rgba(28,28,28,0.4);
-    box-shadow: 0px 3px 28px -3px rgba(28,28,28,1);
-}
-
-.web-screenshot:hover{
-    transform: scale(1.05);
-    transition: 0.2s ease-in-out;
-} */
-
-/* .web-section-flex > article{
-    max-width: 40ch;
-    margin: 5vmin;
-} */
 
 /* individual project pages*/
 
@@ -539,131 +511,6 @@ header > a {
 }
 /* end of overlay code from sylivandurand.com */
 
-/* design page */
-
-.design-section {
-  width: 90vw;
-  margin: 0 auto;
-  margin-bottom: 7vmin;
-}
-
-.design-section img {
-  width: 300px;
-  height: auto;
-}
-
-/* logos */
-
-.logo-section img {
-  padding: 2vmin;
-}
-
-.logo-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-  width: 85vw;
-}
-
-#zoo-logos {
-  grid-column: 1/2;
-  grid-row: 1/3;
-  width: 30vw;
-}
-
-#dots-logo {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  width: 15vw;
-}
-
-#turtle-logo {
-  grid-column: 3/4;
-  grid-row: 1/2;
-  width: 20vw;
-}
-
-#logo-paragraph {
-  grid-column: 2/4;
-  grid-row: 2/3;
-  max-width: 60ch;
-  padding: 2vmin;
-  align-self: start;
-}
-
-/* mock-ups */
-
-.mockup-section {
-  display: flex;
-  flex-direction: column;
-
-  width: 90vw;
-}
-
-.mockup-div-flex {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.mockup-div-flex img {
-  width: 40vw;
-  height: auto;
-  margin: 2vmin;
-  border: 1px solid gray;
-}
-
-.mockup-and-paragraph-div {
-  display: flex;
-  flex-direction: column;
-}
-
-#mockup-paragraph {
-  max-width: 60ch;
-}
-
-/* typography */
-
-.experiment-section img {
-  padding: 2vmin;
-}
-
-.experiment-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  align-items: center;
-  justify-items: center;
-}
-
-#typography-sketch {
-  grid-column: 1/2;
-  grid-row: 1/4;
-  width: 40vw;
-}
-
-#ambigram {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  width: 30vw;
-}
-
-#deconstructed-text {
-  grid-column: 2/3;
-  grid-row: 2/3;
-  width: 30vw;
-}
-
-#experiment-paragraph {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  max-width: 50ch;
-  padding: 2vmin;
-  align-self: start;
-}
-
 /* about page */
 
 #julia-photo {
@@ -722,6 +569,12 @@ article ul {
 
 .contact-main a {
   text-decoration: none;
+  color: hsla(249, 80%, 56%, 1);
+}
+
+.contact-main a:hover {
+  text-decoration: none;
+  color: hsla(249, 85%, 70%, 1);
 }
 
 .contact-info-section {
@@ -927,25 +780,6 @@ footer > p > a:hover {
     height: auto;
   }
 
-  /* design page */
-
-  .mockup-div-flex {
-    flex-direction: column;
-  }
-
-  .mockup-and-paragraph-div {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-
-  .mockup-div-flex img {
-    width: 80vw;
-  }
-
-  #mockup-paragraph {
-    padding: 3vmin;
-  }
-
   /* contact */
 
   .contact-main {
@@ -966,43 +800,6 @@ footer > p > a:hover {
   .art-photos-section > a > img {
     width: 35vw;
     margin: 2vmin;
-  }
-
-  /* logos */
-  .logo-section {
-    grid-template-columns: 2fr 1fr;
-    grid-template-rows: 2fr 2fr 3fr;
-  }
-
-  #zoo-logos {
-    width: 40vw;
-  }
-
-  #turtle-logo {
-    grid-area: 2/2/3/3;
-  }
-
-  #logo-paragraph {
-    grid-area: 3/1/3/3;
-  }
-
-  /* typography */
-
-  .experiment-section {
-    grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-
-  #typography-sketch {
-    width: 40vw;
-  }
-
-  #deconstructed-text {
-    grid-area: 2/2/3/3;
-  }
-
-  #experiment-paragraph {
-    grid-area: 3/2/4/3;
   }
 
   /* about page */
@@ -1034,38 +831,6 @@ footer > p > a:hover {
 }
 
 @media (max-width: 630px) {
-  /* project pages */
-
-  /* .project-header-info{
-            grid-template-columns: 1fr;
-        }  */
-
-  /* typography */
-
-  .experiment-section {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 2fr 1fr;
-  }
-
-  #typography-sketch {
-    grid-area: 3/1/4/2;
-    width: 70vw;
-  }
-
-  #ambigram {
-    grid-area: 1/1/2/2;
-    width: 70vw;
-  }
-
-  #deconstructed-text {
-    grid-area: 2/1/3/2;
-    width: 70vw;
-  }
-
-  #experiment-paragraph {
-    grid-area: 4/1/5/2;
-  }
-
   /* contact */
 
   .contact-fieldset {
@@ -1088,10 +853,6 @@ footer > p > a:hover {
     height: 90vh;
   }
 
-  /* .page-header{
-        height: 50vh;
-    } */
-
   #home-intro {
     align-self: center;
   }
@@ -1099,30 +860,6 @@ footer > p > a:hover {
   #home-button a {
     padding: 3vmin;
   }
-
-  /* design page */
-  /* .logo-section{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 2fr 3fr;
-
-    }
-
-    #zoo-logos{
-        grid-area: 2/1/3/3;
-        width: 60vw;
-    }
-
-    #dots-logo{
-        grid-area: 1/1/2/2;
-        width: 30vw;
-
-    }
-
-    #turtle-logo{
-        grid-area: 1/2/2/3;
-        width: 30vw;
-
-    } */
 
   /* contact */
 
