@@ -56,7 +56,8 @@ ul li {
 
 #home-julia-logo {
   width: 100px;
-  margin: 5vmin;
+  margin-left: 60px;
+  margin-top: 40px;
 
   grid-column: 1/2;
   grid-row: 1/2;
@@ -66,7 +67,7 @@ ul li {
   grid-column: 2/3;
   grid-row: 1/2;
   align-self: center;
-  margin-right: 5vmin;
+  margin-right: 50px;
 }
 
 .global-nav-ul {
@@ -198,7 +199,7 @@ header > a {
 
 .page-julia-logo {
   height: 60px;
-
+  margin-left: 40px;
   grid-column: 1/2;
 }
 
@@ -210,6 +211,7 @@ header > a {
   width: 40px;
   background-size: 40px;
   margin: 20px;
+  margin-right: 40px;
   display: none; /*so it doesn't show up at desktop size*/
 
   /* grid */
