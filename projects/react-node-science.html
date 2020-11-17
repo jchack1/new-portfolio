@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hack | React & Node.js Science News App </title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/project-page-extra.css">
+    <link rel="stylesheet" href="../assets/css/science.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+        <header class="page-header">
+                <a href="../index.html"><img src="../assets/images/ai-interfacelogo-desktop-white.svg" class="page-julia-logo" alt="julia's logo"></a>
+        
+                <nav class="global-nav" id="global-nav">
+                    <ul class="global-nav-ul">
+                        <img src="../assets/images/close.svg" alt="close-menu" id="close-menu">
+                        <li class="project-nav-link "><a id="nav-active" href="../projects.html">Projects</a></li>
+                        <li class="art-photos-nav-link"><a href="../art-photos.html">Photos &amp; Art</a></li>
+                        <li class="about-nav-link"><a href="../about.html">About</a></li>
+                        <li class="contact-nav-link"><a href="../contact.html">Contact</a></li>
+                        
+                    </ul>
+                </nav>
+        
+                <div class="hamburger-menu" id="hamburger-menu"></div>
+
+        
+            </header>
+
+            <main class="project-ind-main">
+
+                <section class="project-header">
+
+                    <h1 class="project-ind-title">React & Node.js Science News App</h1>
+
+                    <img src="../assets/images/web-screenshots/science-news.jpg" alt="science news" class="project-header-image">
+
+                    <div class="project-ind-description">
+                        <p>This app pulls science news articles published in Canada from an API called GNews.io.  I choose to build it with a React front-end and a Node.js/Express backend in order to improve and practice my skills in these technologies.</p>
+
+                        <p>The npm "request" package was used to get the data from the API. This occurs on the Node.js backend. My React front-end uses Axios to get this data from the backend. React Router is used for routing between the Home and About pages.</p>
+
+                        <p>
+                            <a
+                              href="https://github.com/jchack1/react-science-news-public"
+                              target="_blank"
+                              >See the code on Github</a
+                            >
+                          </p>
+                
+                          <p>
+                            <a href="https://react-science-news.herokuapp.com/" target="_blank"
+                              >View the app</a
+                            >
+                          </p>
+                    </div>
+            
+                </section>
+
+                <section class="project-ind-body">
+                    <hr class="hr-style"></hr>
+
+                    <h2>Purpose of the project</h2>
+
+                    <p>Before I worked in this industry I went to univeristy and earned a Bachelor of Science degree in Biological Sciences. </p>
+
+                    <p>I chose this degree because I was curious about the inner workings of things, especially in the field of molecular biology and biochemistry. I worked in science for only a short time but my curiosity for this field remained.</p>
+
+                    <p>I wanted to keep up with new advances in science. At first I tried subscribing to research journals, but I found that I fell behind in my reading quickly. While in school for web development I came across a news API which could be filtered by topic. I decided to make an app for myself that contained science news articles. This was how I could stay connected to science while practicing my web development skills.</p>
+
+                    <hr class="hr-style"></hr>
+
+                    <h2>Design</h2>
+
+                    <div class="science-content">
+                        <img src="../assets/images/science-design.png" alt="science app mockup" class="science-img">
+                        <div class="science-paragraphs">
+                            <p>Many of my designs have a light colour palette so this time I wanted to change things up a bit and use a darker colour palette.</p>
+
+                            <p>While researching dark web designs I learned that it is very visually appealing and good for accessibility to pair light, bright colours with darker design elements. I choose a bright teal and purple, as they felt modern and well-suited to a science theme.</p>
+
+                            <p>I also knew I wanted the articles to appear in a card-style layout, with one article per card. This made sense with the development process since the API sends article objects with all details for an article packaged together. These are easy to iterate through with JavaScript.</p>
+
+                            <p>I used a mobile-first design process and created this mock-up using Adobe Illustrator. All icons were created by me, to keep up my Illustrator skills. It should be noted that the final app does not have a "Load more" button.  This is because GNews.io only sends 10 articles at a time on the free plan.</p>
+
+                        </div>
+
+                    </div>
+                    <hr class="hr-style"></hr>
+
+                    <h2>Notes on development</h2>
+
+                    <p>I had originally intended to complete this project only with React, but I included Node.js for two reasons.</p>
+
+                    <p>1.  In order to deploy the app to Heroku I needed a server.js file.  This meant I would be setting up a Node.js/Express back-end no matter what.</p>
+
+                    <p>2.  GNews.io gives the user an API key which is meant to be kept secret.  If I had included it in the front-end, even in a .env file, it would be visible in the Network tab in browser developer tools.  If my API key is kept in the back-end, and out of my github code, it is not visible to anyone.</p>
+
+                    <p>This made the project more challenging because I needed to connect the front-end and back-end. I created a "get" route in the back-end which fetched the data from the API, and in the front-end Axios made a request to this route.</p>
+
+                    <p>If you would like to read more details about the challenges of this project and how I handled them you may view <a href="https://juliachack-dev-blog.netlify.app/react-nodejs-app">this post on my blog</a>.</p>
+                </section>
+
+            </main>
+        
+            <footer>
+                <p>
+                    <a href="https://github.com/jchack1" target="_blank"><i class="fa fa-github-square"></i></a> 
+                    <a href="https://www.linkedin.com/in/juliahack" target="_blank"><i class="fa fa-linkedin"></i></a> 
+                    <a href="https://www.instagram.com/juliachack/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+                </p>
+                <p>&copy; Julia Hack</p>
+            </footer>
+            <script src="../script.js"></script>
+
+        </body>
+</html>

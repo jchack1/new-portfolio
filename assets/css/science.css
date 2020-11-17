@@ -1,0 +1,27 @@
+.science-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  width: 80vw;
+  max-width: 1200px;
+}
+
+.science-img {
+  min-width: 100px;
+  max-width: 300px;
+}
+
+.science-paragraphs p {
+  max-width: 70ch;
+  margin: 20px;
+}
+
+@media (min-width: 700px) {
+  .science-content {
+    flex-direction: row;
+    width: 80vw;
+    margin: 50px;
+    justify-content: space-evenly;
+  }
+}
