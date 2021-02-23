@@ -12,9 +12,51 @@
   max-width: 300px;
 }
 
+.flashcard-img {
+  min-width: 200px;
+  max-width: 300px;
+}
+
+.flashcard-home {
+  min-width: 100px;
+  max-width: 250px;
+}
+
 .science-paragraphs p {
   max-width: 70ch;
   margin: 20px;
+}
+
+.flashcard-single-p {
+  max-width: 70ch;
+  margin: 20px;
+}
+
+.flashcard-mobile-div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vw;
+  margin: 50px 30px;
+  max-width: 1200px;
+  justify-content: center;
+}
+
+.flashcard-mobile-img {
+  min-width: 100px;
+  max-width: 175px;
+  margin: 20px;
+}
+
+@media (max-width: 550px) {
+  .flashcard-mobile-img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 450px) {
+  .flashcard-mobile-img {
+    max-width: 175px;
+  }
 }
 
 @media (min-width: 700px) {

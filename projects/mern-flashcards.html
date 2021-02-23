@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hack | MERN Stack Flashcard App </title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/project-page-extra.css">
+    <link rel="stylesheet" href="../assets/css/science.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+        <header class="page-header">
+                <a href="../index.html"><img src="../assets/images/ai-interfacelogo-desktop-white.svg" class="page-julia-logo" alt="julia's logo"></a>
+        
+                <nav class="global-nav" id="global-nav">
+                    <ul class="global-nav-ul">
+                        <img src="../assets/images/close.svg" alt="close-menu" id="close-menu">
+                        <li class="project-nav-link "><a id="nav-active" href="../projects.html">Projects</a></li>
+                        <li class="art-photos-nav-link"><a href="../art-photos.html">Photos &amp; Art</a></li>
+                        <li class="about-nav-link"><a href="../about.html">About</a></li>
+                        <li class="contact-nav-link"><a href="../contact.html">Contact</a></li>
+                        
+                    </ul>
+                </nav>
+        
+                <div class="hamburger-menu" id="hamburger-menu"></div>
+
+        
+            </header>
+
+            <main class="project-ind-main">
+
+                <section class="project-header">
+
+                    <h1 class="project-ind-title">MERN Stack Science Flashcard App</h1>
+
+                    <img src="../assets/images/web-screenshots/flashcards-screenshot.jpg" alt="science news" class="project-header-image">
+
+                    <div class="project-ind-description">
+                        <p>In order to practice my skills in the MERN stack I created this flashcard app.  The React front-end displays a home page with tiles for various science categories and React Router links them to their respective flashcard pages. Flashcard data is stored in MongoDB with help from Mongoose. The Node.js/Express back-end picks a random item from the database when an API call is made from Axios on the front-end.</p>
+
+                        <p>TailwindCSS, Styled-Components, and Font Awesome are used for styling and flashcard graphics were created in Adobe Illustrator. </p>
+
+                        <p>
+                            <a
+                              href="https://github.com/jchack1/mern-flashcard-app"
+                              target="_blank"
+                              >See the code on Github</a
+                            >
+                          </p>
+                
+                          <p>
+                            <a href="https://react-science-flashcards.herokuapp.com/" target="_blank"
+                              >View the app</a
+                            >
+                          </p>
+                    </div>
+            
+                </section>
+
+                <section class="project-ind-body">
+                    <hr class="hr-style"></hr>
+
+                    <h2>Purpose of the project</h2>
+
+                    <p>Recently I found some old flashcards I made when I was in university working on my science degree.</p>
+
+                    <p>I had been searching for a project idea in order to practice my skills in the MERN stack, particularly something that would allow me to utilize MongoDB and Mongoose.  A flashcard app was a good fit, as I could store flashcard data in my database, create an API, and fetch items from the API to display on the front-end.</p>
+
+                    <p>Using science as the subject area made the project fun and interesting for me and I enjoyed revisiting the topics I used to study.</p>
+
+                    
+                    <hr class="hr-style"></hr>
+
+                    <h2>Design</h2>
+
+                    <div class="science-content">
+                        <img src="../assets/images/flashcards/flashcards-mobile.JPG" alt="flashcard home page mobile" class="flashcard-home">
+                        <div class="science-paragraphs">
+                            <p>A dark background is used across the app as it contrasted nicely with the light coloured flashcards. An image from unsplash was added for texture, with a dark coloured background-blend-mode overlayed on top in the CSS.</p>
+
+                            <p>As I use Tailwind and Styled-Components for work I wanted to incorporate them in this project for extra practice. </p>
+
+                            <p>Tailwind was great for making the app fonts and colors look consistent and clean.  When I wanted more control I used Styled-Components, to create React components directly in the files where I was using them without relying on a separate CSS stylesheet.</p>
+
+                            <p>Icons were used throughout the app to break up areas of text and improve the aesthetics of the app. The icons are from Font Awesome. </p>
+                            
+                        </div>
+
+                    </div>
+                        <p  class="flashcard-single-p">Flashcard categories are displayed in a tile format, each assigned a different color. The colours are carried over to the flashcard pages in the “Back to home” and “Next” buttons.</p>
+
+
+                    <div class="flashcard-mobile-div">
+                        <img src="../assets/images/flashcards/amino-acid-mobile-answer.JPG" alt="amino acid mobile" class="flashcard-mobile-img" style="margin: 20px">
+                        <img src="../assets/images/flashcards/biology-mobile-answer.JPG" alt="biology mobile" class="flashcard-mobile-img"  style="margin: 20px">
+                        <img src="../assets/images/flashcards/chemistry-mobile-answer.JPG" alt="chemistry mobile" class="flashcard-mobile-img"  style="margin: 20px">
+                        <img src="../assets/images/flashcards/physics-mobile-answer.JPG" alt="physic mobile" class="flashcard-mobile-img"  style="margin: 20px">
+                    </div>
+
+                    <div class="science-content">
+                        <p style="margin: 30px; max-width: 60ch;">The graphics used for the amino acid and organic chemistry flashcards I created myself in Adobe Illustrator. In doing so I was able to make the molecules look exactly how I wanted, practice using Illustrator, and not have to worry about image copyright.</p>
+                        <img src="../assets/images/flashcards/Glutamine.svg" alt="amino acid graphic" class="flashcard-img">
+                    </div>
+
+                    <hr class="hr-style"></hr>
+
+                    <h2>Notes on development</h2>
+
+                    <p>In my previous React apps I fetched data from an external API. Since I already had my own flashcard data this was a great opportunity to practice setting up my own database with MongoDB. Mongoose was used to create schemas for each item to follow; each science category had a different schema depending on the type of data I had available. I then created an API with get and post routes that the front-end could access. A separate npm package was brought into the app to obtain the "get random item" functionality. </p>
+
+                    <p>The flashcard components on the front-end make an Axios call to the "get random" route for their respective category.  The UseState React hook was used to store state. Whenever the flashcard page loads, or the "Next" button is clicked, a new random item is retrieved from the database and stored in the "item" variable for use on the flashcard. The "flipped" variable stores which "side" of the flashcard is currently visible, and is returned to the "question" side of the flashcard when a new API call is made. This is so the user doesn't see the answer to the next flashcard before they see the term or image.</p>
+                    
+                    <p>Deploying this app on Heroku presented its own set of challenges, as I have not deployed a full MERN stack app before creating this app. It was especially important to ensure that my server.js file in the back-end was pointing to the appropriate folder to get the static website files from the React build process, and that the connection was being made to the database.</p>
+
+                    <p>If you would like to read more details about the challenges of this project and how I handled them you may view <a href="https://juliachack-dev-blog.netlify.app/mern-flashcard-app">this post on my blog</a>.</p>
+                </section>
+
+            </main>
+        
+            <footer>
+                <p>
+                    <a href="https://github.com/jchack1" target="_blank"><i class="fa fa-github-square"></i></a> 
+                    <a href="https://www.linkedin.com/in/juliahack" target="_blank"><i class="fa fa-linkedin"></i></a> 
+                    <a href="https://www.instagram.com/juliachack/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+                </p>
+                <p>&copy; Julia Hack</p>
+            </footer>
+            <script src="../script.js"></script>
+
+        </body>
+</html>
