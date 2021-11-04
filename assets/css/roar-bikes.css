@@ -1,0 +1,66 @@
+.roar-img {
+  max-width: 900px;
+  min-width: 300px;
+}
+
+.mockup {
+  max-width: 600px;
+}
+
+.project-body-img-roar {
+  border: 1px solid rgb(173, 173, 173);
+}
+
+.reverse {
+  /* reverse direction of row */
+  flex-direction: row-reverse;
+}
+
+#roar-sketch {
+  min-width: 250px;
+  max-width: 600px;
+}
+
+.page-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 30px;
+  width: 80vw;
+  max-width: 1200px;
+  justify-content: space-evenly;
+}
+
+#roar-pattern-img {
+  max-width: 600px;
+}
+
+#roar-style-tile {
+  max-width: 800px;
+}
+
+h2 {
+  text-align: center;
+}
+
+@media (max-width: 400px) {
+  .page-content p {
+    min-width: 15ch;
+  }
+}
+
+@media (min-width: 900px) {
+  .page-content {
+    flex-direction: row;
+    margin: 30px;
+  }
+  .reverse {
+    /* reverse direction of row */
+    flex-direction: row-reverse;
+  }
+  .page-content p {
+    max-width: 30ch;
+    min-width: 20ch;
+    margin: 20px;
+  }
+}
