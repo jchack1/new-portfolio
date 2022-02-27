@@ -149,15 +149,16 @@ ul li {
 }
 
 #home-button {
-  margin-top: 7vmin;
+  margin-top: 40px;
 }
 
 #home-button a {
   border: 2px solid white;
   border-radius: 8px;
-  padding: 2vmin;
+  padding: 15px 20px;
   color: white;
   text-decoration: none;
+  transition: ease-in-out 0.3s;
 }
 
 #home-button a:hover {
@@ -629,6 +630,7 @@ form {
   color: white;
   text-decoration: none;
   font-size: 1rem;
+  transition: ease-in-out 0.3s;
 }
 
 #contact-submit-button:hover {
@@ -862,7 +864,7 @@ footer > p > a:hover {
   }
 
   #home-button a {
-    padding: 3vmin;
+    padding: 8px 12px;
   }
 
   /* contact */
