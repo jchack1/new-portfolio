@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Julia Hack | Pokemon API App</title>
+    <title>Julia Hack | Pokedex - Version 2</title>
     <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/science.css">
+    <link rel="stylesheet" href="../assets/css/pokedex.css">
     <link rel="stylesheet" href="../assets/css/project-page-extra.css" />
     <link
       rel="shortcut icon"
@@ -47,40 +49,113 @@
 
     <main class="project-ind-main">
       <section class="project-header">
-        <h1 class="project-ind-title">Pokemon API App</h1>
+        <h1 class="project-ind-title">Pokedex - Version 2</h1>
 
         <img
-          src="../assets/images/web-screenshots/pokemon-api-screenshot.JPG"
+          src="../assets/images/web-screenshots/pokedex-v2-screenshot.jpg"
           alt="pokemon app screenshot"
           class="project-header-image"
         />
 
         <div class="project-ind-description">
           <p>
-            This app was created in order to practice fetching data from an API
-            using JavaScript. Like many members of my SAIT class I chose the
-            pokemon API, as it is a very straightforward API to get started
-            with. A user can click on a card to reveal more information about
-            that particular pokemon. I hope to add more functionality to this
-            app in the future, but building it was an excellent introduction to
-            using APIs.
+            This is an updated version of an app I made while studying web development at SAIT.  Built with React this time around, this app fetches the first 50 pokemon from the PokeAPI, stores the data in the browser, and displays a card for each pokemon.  Styled Components is used for styling, and Axios is used to fetch the data.
           </p>
 
           <p>
             <a
-              href="https://github.com/jchack1/javascript-assignment-3"
+              href="https://github.com/jchack1/react-pokedex2"
               target="_blank"
               >See the code on Github</a
             >
           </p>
 
           <p>
-            <a href="https://zen-aryabhata-199c38.netlify.app/" target="_blank"
+            <a href="https://react-pokedex-v2.netlify.app/" target="_blank"
               >View the app</a
             >
           </p>
         </div>
       </section>
+
+
+      <section class="project-ind-body">
+        <hr class="hr-style"></hr>
+
+        <h2>Version 1</h2>
+
+        <p>In my JavaScript class at SAIT we were tasked with creating an app that fetches data from an API and displays the data on the front end. Many of us chose the <a href=”https://pokeapi.co/”>pokemon API</a> because it is easy to work with and beginner friendly. </p>
+
+        <p>The original project was built with vanilla JavaScript, and I made use of the “document.createElement” function all throughout the code to create the pokemon cards.  It is helpful of course to create projects in plain JavaScript because it helps you to learn the fundamentals, and how JavaScript works with the DOM.</p>
+
+        <p>My original project fetched the data from the API and displayed some of the data on cards.</p>
+
+        <img src="../assets/images/pokedex/pokedex-v1.PNG" alt="pokedex version 1 screenshot" class="big-images">
+
+        <p>If you’d like, you can see <a href="https://zen-aryabhata-199c38.netlify.app/">Version 1 of the app here</a>, and <a href="https://github.com/jchack1/javascript-assignment-3">view the code on Github here.</a></p>
+
+        <hr class="hr-style"></hr>
+
+        <h2>Version 2</h2>
+        
+        <br>
+        <br>
+
+        <h3>Styling</h3>
+
+        <p>Since I’m experienced with using React, and React is well-suited for card-style layouts, I decided to use it to build Version 2.   Being able to control the styling of my components directly in my JavaScript files is very convenient, so I used Styled Components for most of the styling within the app.</p>
+
+        <p>It was important for me to make the design more visually interesting than Version 1, which was white and grey except for the pokemon images and felt a bit plain.  I had been using gradients a lot at work, so I thought a red and blue gradient in the background would brighten up the app and match well with Pokemon’s branding.  The card style is very similar to Version 1, with a more subtle shadow effect on mouse hover. The Ash and Pikachu image in the header ties the colour palette together and gives the app a cartoonish, playful feel.</p>
+
+        <div class="science-content">
+            <img src="../assets/images/pokedex/pokedex-loading.PNG" alt="science app mockup" class="science-img">
+            <div class="science-paragraphs">
+                <p>When the app is first opened and the data is being fetched there are a few seconds of lag, so it was important to have an interesting loading screen.  I decided to incorporate a pokeball into the loading component, since I had not used it yet anywhere else in the design, and gave it a bouncing animation.</p>
+
+               
+
+            </div>
+
+        </div>
+        <!-- <hr class="hr-style"></hr> -->
+
+        <h3>Storing the data</h3>
+
+        <p>The introduction of the PokeAPI docs requests that developers cache their data locally once fetched.  This way the developer can work on their application and discover how the API works without making too many calls to the API and burdening it.</p>
+
+        <p>While building Version 1 of the app I didn’t know how to do this and it wasn’t a requirement of the assignment.  Since then my developer skills have improved, so I wanted to respect the API developers’ wishes and attempt caching the data. I knew that I would be refreshing my page often while styling the app and didn’t want to make unnecessary calls to the API.</p>
+
+        <p>At first I saved the data to local storage, retrieving my items whenever I needed to display the cards.  While researching local storage further I discovered session storage, and decided to update my code to use this instead.  The difference between local storage and session storage is that local storage is saved in the client’s browser until they delete it, while session storage is deleted when the tab is closed.  I chose to go with session storage because it felt unnecessary for me to store pokemon data on a client’s browser long term, especially if they only viewed the app once or twice. </p>
+        <p>I sometimes ran into issues with fetching the data.  The app makes a call to the API to get data for each pokemon, and fetching from an external source happens asynchronously, even if your code <strong>appears</strong> to be synchronous.  To handle this I made use of JavaScript’s async/await functionality, which I use all the time at work, to ensure the app waits for the data to be returned from the API before moving onto the next line of code.  When I didn’t do this, the cards would sometimes display out of order, or not at all, because my display functionality was rendering before the app had all the required data.</p>
+
+        <!-- <hr class="hr-style"></hr> -->
+
+        <h3>Filtering</h3>
+
+        <p>While I was proud of Version 1 when I built it originally, it is undeniable that it is lacking in functionality.  Version 2 needed to be more interactive and informative, so I added the capability to filter pokemon by type and ability.</p>
+
+        <p>I started by adding a multi-select dropdown for type; a user would be able to select one or more types of pokemon to display.  However, many pokemon have multiple types – for example, if you selected “bug” and “flying” types, would you expect to see all pokemon that are “bug” <strong>or</strong> “flying”? Or would you want to get only the pokemon that are <strong>both</strong> “bug” <strong>and</strong> “flying”? A user could realistically want either of these options.</p>
+
+        <p>To address this I added a toggle to both the type and abilities selectors where a user can choose “or” or “and”.</p>
+
+        <p>A user can filter pokemon only by types, if they leave the abilities selection empty, and vice versa.  One could also find pokemon with specific types <strong>and</strong> abilities combined.</p>
+
+        <img src="../assets/images/pokedex/pokedex-filter.PNG" alt="pokedex filtered" class="big-images">
+
+        <hr class="hr-style"></hr>
+
+        <h2>Conclusion</h2>
+
+        <p>Creating Version 1 of this project was very challenging for me at the time, as I was still new to web development.  Version 2 had its own challenges, particularly with fetching the pokemon data asynchronously, but I was able to leverage my JavaScript experience to solve the problem.</p>
+
+        <p>Version 2 is an improvement over Version 1, both in styling and functionality. I had a lot of fun building it and am proud to see the progress I’ve made as a developer.</p>
+
+        <p>Pokemon sprites displayed on the cards are from the PokeAPI, and all other images are from <a href=”https://snipstock.com/”>Snipstock.</a></p>
+
+    </section>
+
+
+
     </main>
 
     <footer>
