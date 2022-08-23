@@ -136,6 +136,9 @@ ul li {
   grid-row: 2/3;
 
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #home-title {
@@ -863,9 +866,9 @@ footer > p > a:hover {
     align-self: center;
   }
 
-  #home-button a {
+  /* #home-button a {
     padding: 8px 12px;
-  }
+  } */
 
   /* contact */
 
@@ -875,5 +878,17 @@ footer > p > a:hover {
 
   footer {
     height: 10vh;
+  }
+}
+
+@media (max-height: 700px) {
+  #home-julia-logo {
+    width: 50px;
+  }
+}
+
+@media (max-height: 700px) and (max-width: 300px) {
+  #home-title {
+    font-size: 2.2rem;
   }
 }
