@@ -6,3 +6,8 @@
 h3 {
   font-size: 1.4rem;
 }
+
+.pokedex-img {
+  min-width: 100px;
+  max-width: 300px;
+}

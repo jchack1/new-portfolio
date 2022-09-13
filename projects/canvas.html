@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Julia Hack | Canvas app</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/canvas.css">
+    <link rel="stylesheet" href="../assets/css/project-page-extra.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../index.html"
+        ><img
+          src="../assets/images/ai-interfacelogo-desktop-white.svg"
+          class="page-julia-logo"
+          alt="julia's logo"
+      /></a>
+
+      <nav class="global-nav" id="global-nav">
+        <ul class="global-nav-ul">
+          <img
+            src="../assets/images/close.svg"
+            alt="close-menu"
+            id="close-menu"
+          />
+          <li class="project-nav-link">
+            <a id="nav-active" href="../projects.html">Projects</a>
+          </li>
+          <li class="art-photos-nav-link">
+            <a href="../art-photos.html">Photos &amp; Art</a>
+          </li>
+          <li class="about-nav-link"><a href="../about.html">About</a></li>
+          <li class="contact-nav-link">
+            <a href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hamburger-menu" id="hamburger-menu"></div>
+    </header>
+
+    <main class="project-ind-main">
+      <section class="project-header">
+        <h1 class="project-ind-title">Canvas app</h1>
+
+        <img
+          src="../assets/images/web-screenshots/canvas.jpg"
+          alt="pokemon app screenshot"
+          class="project-header-image"
+        />
+
+        <div class="project-ind-description">
+          <p>
+            This app allows users to draw with basic SVG shapes. A user can choose the shape, size, opacity, colour, and rotation of their cursor, and create their own designs on a canvas in the browser. It was built with React, D3.js, and Styled Components.
+          </p>
+
+          <p>
+            <a
+              href="https://github.com/jchack1/canvas-app"
+              target="_blank"
+              >See the code on Github</a
+            >
+          </p>
+
+          <p>
+            <a href="https://creative-mandazi-23d094.netlify.app/" target="_blank"
+              >View the app</a
+            >
+          </p>
+        </div>
+      </section>
+
+
+      <section class="project-ind-body">
+        <hr class="hr-style"></hr>
+
+        <h2>Purpose of project
+        </h2>
+
+        <p>I have a background in art, so I became interested in creative coding.  I worked my way through a few tutorials on the subject using a platform that was built on P5.js. The code you write with libraries like P5.js and D3.js is often meant to give still images or charts, usually based on some data input.</p>
+
+        <p>I became interested in the canvas itself and wondered if I could make a basic app where a user can draw shapes in real time without code, like Microsoft Paint or other drawing apps.</p>
+
+        <p>This was also a good opportunity for me to learn a data visualization library, since data visualization was a part of my job.  I chose to use D3.js since it is a popular library for this type of work.</p>
+
+        
+
+        <hr class="hr-style"></hr>
+
+        <h2>Design considerations</h2>
+        
+        <br>
+        <br>
+
+
+        <p>The only items on the screen are the palette tools and the canvas.  Each element is kept simple with minimal text and no explicit instructions.  A user can see right away what tools are available yet they are free to explore for themselves how they can be used.
+    </p>
+
+        <p>Originally the background was a plain dark gray, but I added a textured paint-stroke background to make it more interesting and tie in with the art theme.  I tried colourful backgrounds as well, but these distracted too much from the drawings on the canvas. It was important for the focus to remain on the canvas and palette and to avoid them getting lost in the background.
+        </p>
+
+
+        <div class="project-ind-content">
+            <img src="../assets/images/canvas/palette-tools.PNG" alt="palette tools" class="palette-img">
+            <div class="project-ind-paragraphs">
+
+                <h3 style="text-align: center; margin-bottom: 50px;">Palette</h3>
+
+                <p>
+
+                There are an infinite number of shapes that could have been included in the palette tools, but I decided to choose only three basics.  In my opinion it is more of a creative challenge to create designs with only a few shapes, and I believe it can lead to interesting and unexpected results.  There are already many apps that give users the freedom to customize shapes, and I didn’t feel the need to recreate them.  Instead, users have the ability to change the size, colour, opacity, and rotation of the available shapes.
+                </p>
+
+                <p>
+                The sliders and shapes on the palette are styled with the current selected colour.  This imitates a real painter’s palette, which often contains the colours that have already been mixed and used in the painting.  In addition, it looks much more appealing than using one neutral colour, and was simple to implement in the code. 
+                </p>
+
+               
+
+            </div>
+
+        </div>
+        <!-- <hr class="hr-style"></hr> -->
+
+        <h3>Screen sizes
+        </h3>
+
+        <p>Normally I ensure every app I create is responsive at all screen sizes, but this app didn’t suit mobile screens very well.  
+        </p>
+
+        <p>A user can still click and draw shapes on a touch screen, but some functionality is missing.  Using the “continuous” drawing functionality doesn’t work, because it requires the user to hover over the canvas. 
+        </p>
+
+        <p>The app works best in a landscape orientation, on a larger screen.  The smaller the screen, the more difficult it is to fit all the palette tools. It would be possible to create a collapsible mobile menu to display the palette tools, but that meant the user was spending more time clicking to open and close the menu.  
+
+
+        </p>
+
+        <p>Another thing that happens at small screen sizes is the canvas simply doesn’t feel big enough to still have fun with it. Ultimately, I’d recommend using the app on a desktop computer with a mouse.  Not every app has to be made for every screen size. 
+    </p>
+
+        <hr class="hr-style"></hr>
+
+        <h2>Notes on development</h2>
+
+        <p>Working on this app helped me learn more about working with the DOM, SVGs, D3, and even taught me some new things about React.
+        </p>
+
+        <p>The first challenge was figuring out how to make my cursor the same shape that was currently selected, but only while the cursor was hovering over the canvas.  To do this in React, I found I needed to use refs, particularly in the context of functional components.  I wrote a more detailed <a href="https://juliachack-dev-blog.netlify.app/react-ref">post about this on my blog</a>, but essentially refs allow you to make a reference to a specific DOM element and do some work with it. 
+        </p>
+
+        <p>In this case, I was able to use getBoundingClientRect() on my main canvas element to get the coordinates of my cursor.  Knowing these coordinates I can transform my cursor back to normal when it moves away from the canvas.
+        </p>
+
+        <p>The biggest challenge was to append new shapes when the canvas is clicked. I was stuck on this for quite a while.  When I inspected the html, I saw that shapes were being added to the DOM, but they were not showing up on the canvas.  I temporarily moved away from the React project and created a simple version of the app with vanilla HTML, CSS, and Javascript (with D3.js included) to see if I could figure it out in a simpler environment. </p>
+
+        <p>The main canvas includes an SVG element, matching the size of the canvas container div.  My cursor showed up on the canvas because I simply added the shape inside the SVG in my code.  I found that I needed to append the new shapes to this SVG, not the container div.  It was helpful to use basic Javascript DOM methods to figure this out, and back in my React app, I realized my ref needed to be placed on the SVG element, not the container div.
+        </p>
+
+        <hr class="hr-style"></hr>
+
+        <h2>Conclusions</h2>
+
+        <p>It was fun to make my own project inspired by creative coding and algorithmic art. I barely scratched the surface of what can be done with SVGs and D3.js, and I am looking forward to seeing what else D3.js has to offer. I’d like to see what it can do when I am not concerned with appending new shapes on click events, so perhaps I can dive further into data visualization next time.</p>
+
+
+    </section>
+
+
+
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://github.com/jchack1" target="_blank"
+          ><i class="fa fa-github-square"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/juliahack" target="_blank"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/juliachack/?hl=en" target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </p>
+      <p>&copy; Julia Hack</p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

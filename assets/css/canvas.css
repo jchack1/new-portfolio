@@ -1,0 +1,24 @@
+.canvas-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  width: 80vw;
+  max-width: 1200px;
+}
+.palette-img {
+  max-width: 200px;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+@media (min-width: 700px) {
+  .canvas-content {
+    flex-direction: row;
+    width: 80vw;
+    margin: 50px;
+    justify-content: space-evenly;
+  }
+}
