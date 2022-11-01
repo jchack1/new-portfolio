@@ -739,7 +739,6 @@ footer > p > a:hover {
     right: -250px;
     width: 250px;
     height: 100vh;
-
     transform: translateX(250px);
 
     background: hsla(213, 23%, 8%, 0.95);
@@ -750,6 +749,7 @@ footer > p > a:hover {
   .menu-open {
     transform: translateX(-250px);
     transition: 0.2s;
+    z-index: 1;
     /* cubic bezier?? */
   }
 
