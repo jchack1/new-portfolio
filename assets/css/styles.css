@@ -192,6 +192,14 @@ ul li {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right;
+
+  /* fixed nav */
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.95;
 }
 
 header > a {
@@ -244,6 +252,7 @@ header > a {
   flex-wrap: wrap;
   width: 95vw;
   margin: 5vmin auto;
+  margin-top: 150px;
 }
 
 .project-section-flex {
@@ -331,6 +340,12 @@ header > a {
 .project-ind-main {
   display: flex;
   flex-direction: column;
+  margin-top: 150px;
+}
+
+/* for fixed nav */
+.top-margin {
+  margin-top: 225px;
 }
 
 .project-header {
@@ -390,6 +405,12 @@ header > a {
   font-size: 1.6rem;
   margin-top: 50px;
   margin-bottom: 10px;
+}
+
+/* hide content until we scroll to it */
+.project-content-hidden {
+  opacity: 0;
+  transition: 1s ease-in-out;
 }
 
 /* originally "science-content" class from science project css, but many pages were using it, so best to generalize here */
@@ -605,6 +626,7 @@ article ul {
   width: 40vw;
   display: flex;
   flex-direction: column;
+  margin-top: 150px;
 }
 
 .contact-icon {
@@ -613,11 +635,16 @@ article ul {
 }
 
 .contact-blog {
-  padding: 5vmin;
+  display: flex;
+  flex-direction: column;
+  max-width: 30ch;
+  align-self: center;
+  text-align: center;
+  align-items: center;
 }
 
 .contact-blog h2 {
-  margin-left: 0;
+  max-width: 25ch;
 }
 
 .contact-fieldset {
@@ -690,6 +717,7 @@ input:focus,
 
 .contact-form-section {
   padding: 0 5vmin;
+  margin-top: 150px;
 }
 
 /* footer */
@@ -748,14 +776,14 @@ footer > p > a:hover {
 
   .menu-open {
     transform: translateX(-250px);
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
     z-index: 1;
     /* cubic bezier?? */
   }
 
   .menu-close {
     transform: translateX(0px);
-    transition: 0.2s;
+    transition: 0.2s ease-in-out;
   }
 
   .hamburger-menu,
@@ -803,6 +831,7 @@ footer > p > a:hover {
     transition: 0.6s;
     width: 70vmin;
     height: auto;
+    margin-top: 150px;
   }
 
   /* contact */
@@ -813,6 +842,15 @@ footer > p > a:hover {
   }
 
   .contact-info-section {
+    width: 70vw;
+  }
+
+  .contact-form-section {
+    margin-top: 0;
+  }
+
+  .contact-fieldset,
+  #message {
     width: 70vw;
   }
 
@@ -864,6 +902,11 @@ footer > p > a:hover {
 
   #message {
     width: 70vw;
+  }
+
+  .contact-main h2,
+  .contact-fieldset {
+    margin-top: 80px;
   }
 
   input {
