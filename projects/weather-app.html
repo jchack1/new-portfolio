@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Julia Hack | Weather App</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css" />
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body
+    style="
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    "
+  >
+    <header class="page-header">
+      <a href="../index.html"
+        ><img
+          src="../assets/images/ai-interfacelogo-desktop-white.svg"
+          class="page-julia-logo fade-in-1"
+          alt="julia's logo"
+      /></a>
+
+      <nav class="global-nav" id="global-nav">
+        <ul class="global-nav-ul">
+          <img
+            src="../assets/images/close.svg"
+            alt="close-menu"
+            id="close-menu"
+            class="fade-in-1"
+          />
+          <li class="project-nav-link fade-in-1">
+            <a href="../projects.html">Projects</a>
+          </li>
+          <li class="art-photos-nav-link fade-in-1">
+            <a href="../art-photos.html">Photos &amp; Art</a>
+          </li>
+          <li class="about-nav-link fade-in-1">
+            <a href="../about.html">About</a>
+          </li>
+          <li class="contact-nav-link fade-in-1">
+            <a href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hamburger-menu fade-in-1" id="hamburger-menu"></div>
+    </header>
+
+    <main class="project-ind-main">
+      <section class="project-header fade-in-1">
+        <h1 class="project-ind-title">Weather App</h1>
+
+        <img
+          src="../assets/images/web-screenshots/weather-app.jpg"
+          alt="weather app screenshot"
+          class="project-header-image"
+        />
+
+        <div class="project-ind-description">
+          <p>
+            This is a simple weather app built with React and Styled-Components.
+            The user's location data is fetched using the Geolocation API, and
+            weather data is retrieved from the freeCodeCamp weather API. A user
+            can see their location's temperature in celsius or fahrenheit and a
+            description of the current weather conditions. The background
+            colours also change depending on whether it is day or night.
+          </p>
+
+          <p>
+            <a href="https://github.com/jchack1/weather-app" target="_blank"
+              >See the code on Github</a
+            >
+          </p>
+
+          <p>
+            <a
+              href="https://peaceful-palmier-29b89d.netlify.app/"
+              target="_blank"
+              >View the site</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://github.com/jchack1" target="_blank"
+          ><i class="fa fa-github-square"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/juliahack" target="_blank"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+        <a href="https://www.instagram.com/juliachack/?hl=en" target="_blank"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </p>
+      <p>&copy; Julia Hack</p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
