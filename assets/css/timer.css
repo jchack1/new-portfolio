@@ -1,0 +1,29 @@
+.timer-center-img {
+  max-width: 800px;
+  min-width: 200px;
+  border: 1px solid rgb(173, 173, 173);
+  border-radius: 20px;
+}
+
+.timer-row-img {
+  max-width: 700px;
+  min-width: 300px;
+}
+
+.timer-row-paragraph {
+  max-width: 400px;
+}
+
+@media (max-width: 700px) {
+  .column-reverse {
+    flex-direction: column-reverse;
+  }
+
+  .timer-row-img {
+    min-width: 200px;
+  }
+
+  .timer-row-paragraph {
+    max-width: none;
+  }
+}

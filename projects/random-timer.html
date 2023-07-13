@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Julia Hack | Random Timer App </title>
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/project-page-extra.css">
+    <link rel="stylesheet" href="../assets/css/timer.css">    
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header class="page-header">
+        <a href="../index.html"
+          ><img
+            src="../assets/images/ai-interfacelogo-desktop-white.svg"
+            class="page-julia-logo fade-in-1"
+            alt="julia's logo"
+        /></a>
+  
+        <nav class="global-nav" id="global-nav">
+          <ul class="global-nav-ul">
+            <img
+              src="../assets/images/close.svg"
+              alt="close-menu"
+              id="close-menu"
+              class="fade-in-1"
+            />
+            <li class="project-nav-link fade-in-1">
+              <a href="../projects.html">Projects</a>
+            </li>
+            <li class="art-photos-nav-link fade-in-1">
+              <a href="../art-photos.html">Photos &amp; Art</a>
+            </li>
+            <li class="about-nav-link fade-in-1">
+              <a href="../about.html">About</a>
+            </li>
+            <li class="contact-nav-link fade-in-1">
+              <a href="../contact.html">Contact</a>
+            </li>
+          </ul>
+        </nav>
+  
+        <div class="hamburger-menu fade-in-1" id="hamburger-menu"></div>
+      </header>
+
+            <main class="project-ind-main">
+
+                <section class="project-header fade-in-1">
+
+                    <h1 class="project-ind-title">Random Timer App</h1>
+
+                    <img src="../assets/images/web-screenshots/timer-screenshot.JPG" alt="random timer screenshot" class="project-header-image">
+
+                    <div class="project-ind-description">
+                        <p>This timer app counts down a random number of minutes between two values input by the user.  It was created with React, Styled-Components, with graphics created in Adobe Illustrator and icons from Font-Awesome.</p>
+
+                        <p>
+                            <a
+                              href="https://github.com/jchack1/react-random-timer"
+                              target="_blank"
+                              >See the code on Github</a
+                            >
+                          </p>
+                
+                          <p>
+                            <a href="https://the-random-timer.netlify.app/" target="_blank"
+                              >View the app</a
+                            >
+                          </p>
+                    </div>
+            
+                </section>
+
+                <section class="project-ind-body fade-in-2">
+                    <hr class="hr-style"></hr>
+
+                    <h2>Purpose of the project</h2>
+
+                    <p>I built this timer because it was something I wanted to use personally.  I often noticed that I had poor posture while sitting at my desk, and I needed reminders to correct it throughout the day. It made sense to set a timer to remind myself, but I didn’t want to always set the same time interval, because that could become too predictable.</p>
+
+                    <p>None of the timers I use regularly have a random functionality, so I decided to create one.  The user can set a range of values and the timer will calculate a random number of minutes in between those values.  The user can choose to view the time remaining as it counts down, or leave it hidden.</p>
+
+
+                    
+                    <hr class="hr-style"></hr>
+
+                    <h2>Design</h2>
+
+
+                    <p>Since development of the app was relatively straight-foward, I wanted to challenge myself a bit more with the visual design.  I am usually a fan of minimal, clean design, but an aesthetic I was intrigued by was vaporwave.  </p>
+
+                    <p>Vaporwave would be difficult to sum up here succinctly. For our purposes, vaporwave is a music sub-genre and art style that hit its peak popularity in the 2010s.  It evokes nostalgia for 80s and 90s pop culture and the early internet age.  Visually, it’s a chaotic cyberpunk mash-up of pastel colours (often pink and blue), mountains, sunsets, palm trees, grids, vintage computer graphics and so much more. Today a google image search returns the examples below:</p>
+
+
+
+                    <img src="../assets/images/random-timer/vaporwave-google-search.JPG" alt="google image search of vaporwave style" class="timer-center-img"/>
+
+                    <p>There was a lot to work with, so I started with the elements I liked and tried to keep the chaos at a minimum.</p>
+
+                    <p>I started with a pink and blue gradient in the background, with a small amount of transparency. </p>
+
+                    <div class="project-ind-content">
+                       
+                        <div class="project-ind-paragraphs timer-row-paragraph">
+                            <p >Next I created a warped grid SVG using Adobe Illustrator.  The grid was transformed to give the illusion of one-point-perspective, since this is featured in a lot of vaporwave art; it was then layered behind the transparent gradient.  </p>
+                            
+                        </div>
+
+                        <img src="../assets/images/random-timer/grid-black.JPG" alt="plain grid in black" class="timer-row-img">
+
+                    </div>
+
+                    <div class="project-ind-content column-reverse">
+                        
+
+                        <img src="../assets/images/random-timer/timer-background.JPG" alt="app background with gradient, grid, and mountains" class="timer-row-img"/>
+                       
+                        <div class="project-ind-paragraphs timer-row-paragraph">
+                            <p>
+                                On large screen sizes a viewer may notice that the grid doesn’t cover the whole screen.  I would usually prefer to have SVGs cover the whole background, but in this case it fits well with the vaporwave aesthetic, where grids will often not cover the whole design. 
+                            </p>
+
+                            <p>An image of a mountain sunset (from Unsplash) was placed behind the grid, and these layers blended together to create a unique, vaporwave inspired look.</p>
+                            
+                            
+                        </div>
+
+                       
+
+                    </div>
+
+                   
+
+
+                        
+                    <div class="project-ind-content">
+                        
+                       
+                        <div class="project-ind-paragraphs timer-row-paragraph">
+                            <p>
+                                Next, the html elements needed to be styled.  The buttons were given hard lines and shadows inspired by old-school computer graphics, and primary buttons were filled with a deep yellow to form a triad with the pink and blue background.  
+                            </p>
+
+                            <p>There are a variety of fonts used in vaporwave.  For the main title I used a retro font reminiscent of early arcade games, to complement the style of the buttons.  To balance out the design and minimize clutter, the rest of the text was given a sans-serif font, and the inputs are simple white boxes.</p>
+                            
+                            
+                        </div>
+
+                        <img src="../assets/images/random-timer/element-closeup.JPG" alt="close-up on title, inputs, buttons" class="timer-row-img">
+
+                    </div>
+
+                  </p>
+                </section>
+
+            </main>
+        
+            <footer>
+                <p>
+                    <a href="https://github.com/jchack1" target="_blank"><i class="fa fa-github-square"></i></a> 
+                    <a href="https://www.linkedin.com/in/juliahack" target="_blank"><i class="fa fa-linkedin"></i></a> 
+                    <a href="https://www.instagram.com/juliachack/?hl=en" target="_blank"><i class="fa fa-instagram"></i></a>
+                </p>
+                <p>&copy; Julia Hack</p>
+            </footer>
+            <script src="../script.js"></script>
+
+        </body>
+</html>

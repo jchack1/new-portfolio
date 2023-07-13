@@ -72,5 +72,8 @@
   animation-delay: 1.2s;
 }
 .project-card-link.fade-in-1:nth-child(12) {
-  animation-delay: 1.2s;
+  animation-delay: 1.3s;
+}
+.project-card-link.fade-in-1:nth-child(13) {
+  animation-delay: 1.4s;
 }
