@@ -494,6 +494,33 @@ header > a {
   justify-content: space-evenly;
 }
 
+.art-intro-container {
+  display: flex;
+  width: 90vw;
+  margin: 0 auto;
+  flex-direction: column;
+  align-self: center;
+}
+.art-title {
+  font-size: 1.2rem;
+}
+.art-paragraph {
+  margin: 2vmin auto;
+  max-width: 80ch;
+}
+
+.art-paragraph-small {
+  width: 100%;
+}
+
+.art-photos-titles {
+  text-align: center;
+}
+
+.art-hr {
+  margin: 70px auto;
+}
+
 .art-photos-section > a > img {
   width: 300px;
   /* width: auto; */
@@ -888,6 +915,13 @@ footer > p > a:hover {
 }
 
 @media (max-width: 630px) {
+  /* art */
+
+  .art-paragraph,
+  .art-paragraph-small {
+    width: 80vw;
+  }
+
   /* contact */
 
   .contact-fieldset {
