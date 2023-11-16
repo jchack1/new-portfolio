@@ -596,6 +596,7 @@ header > a {
 
 .about-flex h2 {
   margin-left: 0;
+  margin-top: 5vmin;
 }
 
 .my-skills ul li {
