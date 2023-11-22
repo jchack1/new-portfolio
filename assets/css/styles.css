@@ -28,6 +28,11 @@ ul li {
   list-style: square;
 }
 
+code {
+  background: #ddd;
+  font-size: 16px;
+}
+
 /* p{
     font-size: 18px;
 } */
