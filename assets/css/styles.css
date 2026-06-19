@@ -303,6 +303,144 @@ header > a {
   color: rgb(7, 160, 139);
 }
 
+.project-card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.02em;
+  border: 1px solid transparent;
+}
+
+.badge-dev {
+  background-color: #eef0ff;
+  color: #3730a3;
+  border-color: #3730a3;
+}
+
+.badge-design {
+  background-color: #e6faf8;
+  color: #0d9488;
+  border-color: #0d9488;
+}
+
+/* tech stack badges */
+.badge.react {
+  background-color: #e0f4fb;
+  color: #0369a1;
+  border-color: #0369a1;
+}
+
+.badge.typescript {
+  background-color: #dbeafe;
+  color: #1e40af;
+  border-color: #1e40af;
+}
+
+.badge.javascript {
+  background-color: #fefce8;
+  color: #713f12;
+  border-color: #713f12;
+}
+
+.badge.html {
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-color: #991b1b;
+}
+
+.badge.css {
+  background-color: #ede9fe;
+  color: #5b21b6;
+  border-color: #5b21b6;
+}
+
+.badge.aws {
+  background-color: #fef3c7;
+  color: #b45309;
+  border-color: #b45309;
+}
+
+.badge.graphql {
+  background-color: #fce7f3;
+  color: #9d174d;
+  border-color: #9d174d;
+}
+
+.badge.serverless {
+  background-color: #fff1f2;
+  color: #be123c;
+  border-color: #be123c;
+}
+
+.badge.styled-components {
+  background-color: #fff7ed;
+  color: #9a3412;
+  border-color: #9a3412;
+}
+
+.badge.threejs {
+  background-color: #f1f5f9;
+  color: #475569;
+  border-color: #475569;
+}
+
+.badge.d3 {
+  background-color: #ffedd5;
+  color: #ea580c;
+  border-color: #ea580c;
+}
+
+.badge.axios {
+  background-color: #f5f3ff;
+  color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+.badge.tailwind {
+  background-color: #ccfbf1;
+  color: #0f766e;
+  border-color: #0f766e;
+}
+
+.badge.mongodb {
+  background-color: #dcfce7;
+  color: #15803d;
+  border-color: #15803d;
+}
+
+.badge.nodejs {
+  background-color: #f7fee7;
+  color: #3f6212;
+  border-color: #3f6212;
+}
+
+.badge.express {
+  background-color: #f3f4f6;
+  color: #374151;
+  border-color: #374151;
+}
+
+.badge.adobe-xd {
+  background-color: #fdf4ff;
+  color: #a21caf;
+  border-color: #a21caf;
+}
+
+.badge.adobe-illustrator {
+  background-color: #fef9c3;
+  color: #92400e;
+  border-color: #92400e;
+}
+
 .card-text-container {
   display: flex;
   flex-direction: column;
@@ -396,6 +534,10 @@ header > a {
   margin: 40px 20px;
   width: 80vw;
   /* border: 1px solid #d6d6d6; */
+}
+
+.project-img-small {
+  max-width: 300px;
 }
 
 .project-ind-body p {

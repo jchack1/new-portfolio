@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Julia Hack | CSS Learning Lab</title>
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+    <link rel="stylesheet" href="../assets/css/pokedex.css">
+    <link rel="stylesheet" href="../assets/css/project-page-extra.css" />
+    <link rel="stylesheet" href="../assets/css/animations.css">
+    <link
+      rel="shortcut icon"
+      href="../assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header class="page-header">
+      <a href="../index.html"
+        ><img
+          src="../assets/images/ai-interfacelogo-desktop-white.svg"
+          class="page-julia-logo fade-in-1"
+          alt="julia's logo"
+      /></a>
+
+      <nav class="global-nav" id="global-nav">
+        <ul class="global-nav-ul">
+          <img
+            src="../assets/images/close.svg"
+            alt="close-menu"
+            id="close-menu"
+            class="fade-in-1"
+          />
+          <li class="project-nav-link fade-in-1">
+            <a href="../projects.html">Projects</a>
+          </li>
+          <li class="art-photos-nav-link fade-in-1">
+            <a href="../art-photos.html">Photos &amp; Art</a>
+          </li>
+          <li class="about-nav-link fade-in-1">
+            <a href="../about.html">About</a>
+          </li>
+          <li class="contact-nav-link fade-in-1">
+            <a href="../contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="hamburger-menu fade-in-1" id="hamburger-menu"></div>
+    </header>
+
+    <main class="project-ind-main">
+      <section class="project-header fade-in-1">
+        <h1 class="project-ind-title">CSS Learning Lab</h1>
+
+        <img
+          src="../assets/images/css-learning-lab/main-screenshot.png"
+          alt="chat messages screenshot"
+          class="project-header-image"
+        />
+
+        <div class="project-ind-description">
+          <div class="project-card-tags">
+            <span class="badge react">React</span>
+            <span class="badge typescript">TypeScript</span>
+            <span class="badge css">CSS</span>
+          </div>
+          <p>
+            CSS Learning Lab is a single-page, split-screen learning app with a live canvas on one side and a lesson panel on the other. A collapsible sidebar organizes lessons by category, with difficulty indicators and completion tracking so you always know where you are.
+          </p>
+
+          <p>
+            <a
+              href="https://github.com/jchack1/css-learning-lab"
+              target="_blank"
+              >See the code on Github</a
+            >
+          </p>
+
+          <p>
+            <a href="https://css-learning-lab.netlify.app/" target="_blank"
+              >View the app</a
+            >
+          </p>
+
+        </div>
+      </section>
+
+
+      <section class="project-ind-body fade-in-2">
+
+    
+        <hr class="hr-style"></hr>
+
+        <h2>Purpose
+        </h2>
+
+        <p>I built it after filling out the annual State of CSS survey and realizing I was selecting 'Never heard of' more than I'd like. Using Tailwind at work had made me comfortable, but at the cost of keeping up with what vanilla CSS can do on its own. </p>
+
+        <p>There are plenty of ways to stay current — podcasts, tutorials, articles — but I find it easy to forget things I've learned passively without a chance to apply them right away. I wanted something interactive and low-friction, where I could read a short explanation and immediately try it out.</p>
+
+    
+
+        <hr class="hr-style"></hr>
+
+        <h2 style="margin-bottom: 40px">Design decisions</h2>
+
+
+
+        <p>The goal was to make something interactive and quick, with digestible lessons that could be generated easily. It also needed to be something I could create fast, since the whole point was to help myself learn.
+        </p>
+
+        <p>One option was a quiz-style game with a canvas that updated based on multiple-choice selections. Straightforward to code, but I didn't like the lack of interactivity — you could see the changes, but you weren't typing any code.
+        </p>
+
+
+        <p>The stronger inspiration was Flexbox Froggy: a small description of the concept, a place to type, and a visual that responded to your input. What I didn't want was to spend time planning out levels or building a cohesive game narrative.</p>
+        
+        <p>The final plan borrows from Flexbox Froggy's format, but structured closer to freeCodeCamp — a live canvas on one side, with the lesson and text editor together on the other. The goal was the same as those tools: a quick overview and a chance to tinker, without overwhelming the user with information.</p>
+
+
+        <hr class="hr-style"></hr>
+
+        <h2 style="margin-bottom: 40px">Data-driven architecture</h2>
+
+
+        <p>Lesson data is stored in JSON files that include everything needed to render a lesson: the content itself and what the app needs to display it. The JSX lesson component renders whatever is in the JSON, so we don't need a new React component for every lesson — just a standard set of properties and a single renderer.
+        </p>
+
+
+        <p>This also makes AI-generated lessons simple: just produce a JSON file. It separates concerns into *content* and *rendering*, and makes the app easy to extend to dozens or hundreds of lessons.
+        </p>
+
+    
+
+        <p>JSON files are discovered by Vite using `import.meta.glob`, which scans the content folder at build time and creates imports automatically. Add a new JSON file, rebuild, and it's ready.
+        </p>
+
+        <hr class="hr-style"></hr>
+
+        <h2 style="margin-bottom: 40px">AI Workflow</h2>
+
+        <p>A secondary purpose of this project was to test an AI coding workflow with Claude Code. Rather than typing prompts into chat, I kept my preferences, coding standards, project spec, and feature notes in versioned markdown files that I could point the AI to each session. This kept context from getting lost and meant I didn't have to re-explain myself every time. Using AI here let me hit my main goal — building something useful quickly — without spending weeks doing the research myself.</p>
+
+        <hr class="hr-style"></hr>
+
+        <h2 style="margin-bottom: 40px">Features/constraints</h2>
+
+        <p>The app is a split-screen CSS sandbox. The left side is a live canvas — an iframe that renders lesson HTML and reflects CSS changes in real time.</p>
+
+        <img src="../assets/images/css-learning-lab/canvas.png" alt="example canvas view" class="big-images">
+        
+        <p>The right side holds the lesson panel: a short explanation of the CSS property, an old-way vs. modern-way code comparison, a textarea editor pre-filled with starting CSS, and a challenge prompt. </p>
+
+        <img src="../assets/images/css-learning-lab/lesson.png" alt="example lesson view" class="big-images">
+
+        <img src="../assets/images/css-learning-lab/editor.png" alt="example editor view" class="big-images">
+            
+        <p>A collapsible sidebar groups lessons by category with difficulty indicators and completion checkmarks. Prev/Next buttons let you move through the lesson sequence.</p>
+
+        <img src="../assets/images/css-learning-lab/sidebar.png" alt="sidebar with example lessons" class="project-img-small">
+
+        <p>Users can check their code for correctness; if correct, the lesson is marked complete. Progress is stored in local storage and persists between sessions. On completion, some lessons show a <strong>See Other Solutions</strong> button with alternative modern approaches to the same challenge.</p>
+
+        <p>Two constraints shaped the build: no backend, and no CSS libraries.</p>
+
+        <p>A backend would overcomplicate things — there's no API to connect to, no database needed, and JSON content is already compact. For styling, using a CSS library felt counterintuitive for an app whose purpose is to learn vanilla CSS. It also means fewer packages to maintain, and now that the bulk of the app is built, any changes I make give me a chance to practice what I'm learning.</p>
+
+        <hr class="hr-style"></hr>
+
+        <h2 style="margin-bottom: 40px">Next Steps</h2>
+
+        <p>The app currently has a small set of lessons, with more planned. The immediate next step is generating additional content across more CSS categories. Longer term, a debug-style challenge mode — where users fix a broken layout using the concepts they've learned — could add a useful second mode of practice beyond the current build-from-scratch format.</p>
+    </section>
+
+
+
+    </main>
+
+    <footer>
+      <p>
+        <a href="https://github.com/jchack1" target="_blank"
+          ><i class="fa fa-github-square"></i
+        ></a>
+        <a href="https://www.linkedin.com/in/juliahack" target="_blank"
+          ><i class="fa fa-linkedin"></i
+        ></a>
+       
+      </p>
+      <p>&copy; Julia Hack</p>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
